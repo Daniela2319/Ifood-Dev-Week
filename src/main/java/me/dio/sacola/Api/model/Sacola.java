@@ -15,7 +15,7 @@ import java.util.List;
 @Builder
 @Data
 @Entity
-@JsonIgnoreProperties
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @NoArgsConstructor
 
 public class Sacola {

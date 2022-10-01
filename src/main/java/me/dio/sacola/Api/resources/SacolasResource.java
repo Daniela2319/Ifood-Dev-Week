@@ -7,6 +7,7 @@ import me.dio.sacola.Api.resources.Dto.ItemDto;
 import me.dio.sacola.Api.service.SacolaService;
 import org.springframework.web.bind.annotation.*;
 
+
 @RestController
 @RequestMapping("/ifood-devweek/sacolas")
 @RequiredArgsConstructor
@@ -22,11 +23,11 @@ public class SacolasResource {
     }
 
     @GetMapping("/{id}")
-    public Sacola verSacola(@PathVariable("id") Long id){
+    public Sacola verSacola(@PathVariable("id") Long id) {
         return sacolaService.verSacola(id);
     }
 
-    @PatchMapping("/fechaSacola/{sacolaId")
+    @PatchMapping("/fechaSacola/{sacolaId}")
     public Sacola fecharSacola(@PathVariable("sacolaId") Long sacolaId, @RequestParam("formaPagamento") int formaPagamento){
         return sacolaService.fecharSacola(sacolaId, formaPagamento);
     }
